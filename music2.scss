@@ -1,0 +1,206 @@
+* {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.1;
+}
+.line-img {
+    height: 1.1em;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: center;
+    > div {
+        display: none;
+    }
+    overflow: hidden;
+}
+
+.music-staff-container {
+    display: inline-block;
+    width: 100%;
+    height: 20vmin;
+    max-height: 500px;
+    min-height: 100px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    svg {
+        min-width: 100%;
+        width: auto;
+        height: 100%;
+        max-height: 100%;
+    }
+}
+
+#all-performer-controls {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#all-performer-controls > div {
+    height: 100%;
+    width: 100%;
+}
+#all-performer-controls > button {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+}
+
+#info img {
+    max-width: 100%;
+    
+}
+#info a.btn {
+    $margin: 4px;
+    margin-top: $margin;
+    margin-bottom: $margin;
+}
+
+#which-song label {
+    margin: 4px;
+}
+#info {
+    text-align: left;
+    padding: 10px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+#piano-controls {
+    $piano-key-width: 13vmin;
+    $piano-key-height: calc(#{$piano-key-width} * 5);
+    $piano-font-size: 6vmin;
+    $piano-border-size: 0.5vmin;
+    $piano-border-style: $piano-border-size black solid;
+    display: inline-block;
+    height: auto;
+    text-align: left;
+    font-size: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: $piano-border-style;
+    border-right: $piano-border-style;
+    button {
+        vertical-align: top;
+        width: $piano-key-width;
+        position: relative;
+        margin: 0;
+        font-size: initial;
+        span {
+            pointer-events: none;
+            font-size: $piano-font-size;
+        }
+        overflow: hidden;
+    }
+    > .key-pressed {
+        filter: invert(100%);
+        -webkit-filter: invert(100%);
+    }
+    button:nth-child(6), button:nth-child(14) {
+        display: none;
+    }
+    
+    button:nth-child(odd) {
+        background-color: white;
+        color: black;
+        height: $piano-key-height;
+        border: $piano-border-style;
+        border-right: none;
+        z-index: 0;
+        span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        
+    }
+    button:first-child {
+        border-left: none;
+    }
+    button:nth-child(even) {
+        background-color: black;
+        color: black;
+        border: none;
+        height: calc(#{$piano-key-height} * 0.6);
+        width: calc(#{$piano-key-width} * 0.8);
+        margin-left: calc(#{$piano-key-width} * 0.8 / -2);
+        margin-right: calc(#{$piano-key-width} * 0.8 / -2);
+        z-index: 1;
+    }
+    button:focus {
+        outline: 0;
+    }
+}
+
+.svg-pointer-event-helper {
+    pointer-events: all;
+    pointer-events: bounding-box;
+    cursor: pointer;
+}
+
+#sheetmusic-container {
+    /* background-color: rgb(141, 150, 74); */
+    max-height: 30%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin-bottom: 15px;
+}
+
+.selected-note {
+    .vf-notehead, .vf-stem, .vf-modifiers, .vf-flag {
+        path {
+            fill: red;
+            stroke: red;
+        }
+    }
+}
+
+button {
+    i + span {
+        padding-left: 1ch;
+    }
+}
+
+$hor-margin: 4px;
+
+#composer-controls {
+    display: inline-flex;
+    width: 100%;
+    flex-wrap: wrap;
+    button {
+        margin: $hor-margin;
+        min-height: 0;
+        height: auto;
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
+}
+
+#all-composer-controls {
+    text-align: left;
+    margin: $hor-margin;
+}
+
+#all-performer-controls {
+    text-align: left;
+    padding: $hor-margin;
+}
+
+#type-controls {
+    width: 100%;
+    padding: 0 $hor-margin;
+    
+    .btn-toolbar .btn {
+        flex-grow: 1;
+        margin: $hor-margin;
+    }
+    .btn-toolbar {
+        flex-grow: 1;
+    }
+}

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="music2.css">
+        
+        <script src="midi_js/shim/Base64.js" type="text/javascript"></script>
+	<script src="midi_js/shim/Base64binary.js" type="text/javascript"></script>
+        <script src="midi_js/shim/WebAudioAPI.js" type="text/javascript"></script>
+	<script src="midi_js/midi/audioDetect.js" type="text/javascript"></script>
+	<script src="midi_js/midi/gm.js" type="text/javascript"></script>
+	<script src="midi_js/midi/loader.js" type="text/javascript"></script>
+	<script src="midi_js/midi/plugin.audiotag.js" type="text/javascript"></script>
+	<script src="midi_js/midi/plugin.webaudio.js" type="text/javascript"></script>
+	<script src="midi_js/midi/plugin.webmidi.js" type="text/javascript"></script>
+        
+	<script src="midi_js/util/dom_request_xhr.js" type="text/javascript"></script>
+        <script src="midi_js/util/dom_request_script.js" type="text/javascript"></script>
+           
+        <title>Music Maestro</title>
+    </head>
+    <body>
+        <div id="info">
+            
+            <h1>What's Music?</h1>
+            Music, put simply, is the language of musicians. It gives them a way
+            to communicate what pitches to play, how long to play them for, and
+            how loudly they should be played.
+            <p></p>
+            If we didn't have music, all of our songs would just sound like noise.
+            <p></p>
+            Once you finish reading this section, you'll be equipped with all the
+            information you need to explore Compose-away and Performance Alley.
+            <br>
+            <sub>Most images from Wikipedia, used in accordance with Creative Commons licenses.</sub>
+            <hr>
+            <h2>Basics</h2>
+            Written music contains several different notations telling you about
+            how to play sounds.
+            <p></p>
+            A typical staff looks like this:
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Staff240.svg"/>
+            <p></p>
+            There are five lines and four spaces:
+            <br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Staff_lines_and_spaces_SVG.svg"/>
+            <p></p>
+            A clef is added to the staff based on the relative highness or lowness of the notes.
+            <ul>
+                <li>Treble clef <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/GClef.svg"/> - high notes</li>
+                <li>Bass clef <img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/FClef.svg"/> - low notes</li>
+            </ul>
+            <p></p>
+            The staff is divided further into chunks called "measures" (or "bars"). Measures
+            simplify the reading of music.
+            <img src="Measure.jpg"/>
+            <p></p>
+            What goes inside measures? You guessed it, NOTES!
+            <p></p>
+            The place and style a note is drawn in tells you about its pitch and duration.
+            Here are some of the most common notes you'll encounter:
+            <p></p>
+            <ul>
+                <li>A whole note (<img class="line-img" src="https://upload.wikimedia.org/wikipedia/commons/5/53/WholeNote.svg"/>) is equivalent to 4 quarter notes. In most time signatures (but not all), this would be a whole measure.</li>
+                <li>A half note (<img class="line-img" src='https://upload.wikimedia.org/wikipedia/commons/b/b3/Figure_rythmique_blanche_hampe_haut.svg'/>) is equivalent to 2 quarter notes.</li>
+                <li>A quarter note (<img class="line-img" src='https://upload.wikimedia.org/wikipedia/commons/f/fa/Figure_rythmique_noire_hampe_haut.svg'/>) is probably the most common note you'll encounter, and usually takes up 1 beat.</li>
+                <li>An eighth note (<img class="line-img" src='https://upload.wikimedia.org/wikipedia/commons/6/6f/Figure_rythmique_croche_hampe_haut.svg'/>) equals half of one quarter note. Usually the second most common note, it can be used for faster portions of a song.</li>
+                <li>Lastly, a sixteenth note (<img class="line-img" src='https://upload.wikimedia.org/wikipedia/commons/a/a7/Figure_rythmique_double_croche_hampe_haut.svg'/>) is equivalent to a quarter of a quarter note (or half of an eighth note).</li>
+            </ul>
+            <p></p>
+            As you can probably tell, music and math are very much connected. If
+            you're a strong math student, this should make lots of sense.
+			<p></p>
+            In order to know how many notes should be in a measure, we can look
+            at the time signature.
+            <br>
+            <img src="timesignature1.png"/> - This measure has 3 quarter notes ("4" means quarter note) per measure.
+            <p></p>
+            <ul>
+                <li>A 6/8 time signature would have 6 eighth notes per measure.</li>
+                <li>A 2/2 time signature would have 2 half notes per measure.</li>
+            </ul>
+ 
+            <hr>
+            <h2>Tempo</h2>
+            Tempo defines the speed of a piece of music. It sets a steady beat that
+            repeats for the duration of the piece. Some music can sound completely
+            different if played with the wrong tempo.
+            
+            You can experiment with tempo in Compose-away.
+            <hr>
+            <h2>Rhythm</h2>
+            Rhythm describes the times in music when there is sound and the times
+            when there isn't (notes and rests). When put together, this forms a pattern
+            that can be reused throughout the piece. Frequently, however, many different
+            rhythms are used.
+            <hr>
+            <h2>Pitch</h2>
+            Notes are organized into an alphabet, but it only extends from A-G,
+            then loops back to A.
+            <p></p>
+            The Performance Alley keyboard is a great way to learn more about pitches.
+            <hr>
+            <h2>Harmony</h2>
+            Harmony is a way of adding texture to a musical piece.
+            <p></p>
+            Additional notes are played behind the melody to support it and help
+            illustrate a mood.
+            <p></p>
+            Another type of harmony is when multiple voices are playing. Try out
+            the "Canoe Song" in Performance Alley. Where you see stacked notes, try
+            playing just the bottom ones, and then repeat, playing just the top ones.
+            Notice that the song doesn't sound as rich. But when you play them
+            both together, it sounds pretty cool!
+            <hr>
+            <h2>Instrumentation</h2>
+            <ul>
+                <li>In Compose-away, you can only compose for one voice.</li>
+                <li>In Performance Alley, you can play two or three notes at the same time on the piano (in some cases), but there is still only one piano.</li>
+            </ul>
+            In real-life orchestras or bands, music has to be arranged into many parts
+            to be played by different instruments. We've kept things simple here since
+            we're dealing with basics.
+            <hr>
+            <h2>Now It's Your Turn!</h2>
+            There are two interactive activities that you can play with for as long
+            as you want.
+            <ul>
+                <li><a class='btn btn-dark' href='#compose'>Compose-away</a> - Compose your very own piece of music!</li>
+                <li><a class='btn btn-dark' href='#perform'>Performance Alley</a> - Try your hand(s) at performing one or more of the three songs provided.</li>
+            </ul>
+                
+        </div>
+        <div id="all-composer-controls">
+            <div class="music-staff-container"></div>
+            <br/>
+            <div id="composer-controls">
+                <button id="note-pitch-up" class="btn btn-dark"><i class="fa fa-arrow-up"></i><span>Raise by one semitone</span></button>
+                <button id="note-pitch-down" class="btn btn-dark"><i class="fa fa-arrow-down"></i><span>Lower by one semitone</span></button>
+                <button id="note-add" class="btn btn-dark"><i class="fa fa-plus"></i><span>Add note</span></button>
+                <button id="note-remove" class="btn btn-dark"><i class="fa fa-minus"></i><span>Remove note</span></button>
+                <button id="note-play" class="btn btn-dark"><i class="fa fa-play"></i><span>Play composition</span></button>
+                <button disabled="disabled" id="note-stop" class="btn btn-dark"><i class="fa fa-stop"></i></button>
+            </div>
+            <hr>
+            <div id="type-controls" class="btn-toolbar">
+                <div id="note-durations" class="btn-toolbar flex-wrap btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" data-duration="16" autocomplete="off"> Sixteenth
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" data-duration="8" autocomplete="off"> Eighth
+                    </label>
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="options" data-duration="4" autocomplete="off" checked> Quarter
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" data-duration="2" autocomplete="off"> Half
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="options" data-duration="1" autocomplete="off"> Whole
+                    </label>
+                </div>
+                <p>
+                <div id="note-types" class="btn-toolbar btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="types" id="note-type-note" autocomplete="off"> Note
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="types" autocomplete="off"> Rest
+                    </label>
+                </div>
+            </div>
+            <button class='btn btn-dark backButton'><i class='fa fa-arrow-left'></i> Try something else</button>
+        </div>
+        <div id="all-performer-controls">
+            <div style='text-align: center;'>
+                <div id="sheetmusic-container"></div>
+                <div id="which-song" class="btn-toolbar flex-wrap btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary active">
+                        <input type="radio" name="whichsong" data-songid='0' autocomplete="off"> Twinkle Twinkle Little Star
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="whichsong" data-songid='1' autocomplete="off"> London Bridge
+                    </label>
+                    <label class="btn btn-secondary">
+                        <input type="radio" name="whichsong" data-songid='2' autocomplete="off"> Canoe Song
+                    </label>
+                </div>
+                <div id="piano-controls">
+
+                </div>
+            </div>
+            <button class='btn btn-dark backButton'><i class='fa fa-arrow-left'></i> Try something else</button>
+        </div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/2.0.0/jquery.mobile-events.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="music2.js"></script>
+    </body>
+</html>

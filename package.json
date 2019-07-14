@@ -1,0 +1,32 @@
+{
+    "name": "Music2",
+    "version": "1.0.0",
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
+    "author": "tt",
+    "contributors": [],
+    "dependencies": {
+        "opensheetmusicdisplay": "github:opensheetmusicdisplay/opensheetmusicdisplay",
+        "vexflow": "^1.2.89"
+    },
+    "scripts": {
+        "watch": "concurrently \"sass --watch music2.scss music2.css\" \"watchify -t [ babelify --presets [ @babel/preset-env ] ] music2_src.js -o music2.js -v\" \"live-server --no-browser --wait=500 \"",
+        "build:js": "browserify -t [ babelify --presets [ @babel/preset-env ] ] music2_src.js  | uglifyjs -mc > music2.js",
+        "build:css": "sass music2.scss music2.css",
+        "build": "run-s build:*",
+        "start": "npm run watch"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.5.0",
+        "@babel/preset-env": "^7.5.2",
+        "@babel/preset-react": "^7.0.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
+        "babelify": "^10.0.0"
+    }
+}

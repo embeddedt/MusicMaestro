@@ -1,0 +1,196 @@
+* {
+  font-family: "Helvetica", "Arial", sans-serif;
+  line-height: 1.1;
+}
+
+.line-img {
+  height: 1.1em;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+body > div, html > div {
+  display: none;
+}
+
+.music-staff-container {
+  display: inline-block;
+  width: 100%;
+  height: 20vmin;
+  max-height: 500px;
+  min-height: 100px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.music-staff-container svg {
+  min-width: 100%;
+  width: auto;
+  height: 100%;
+  max-height: 100%;
+}
+
+#all-performer-controls {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#all-performer-controls > div {
+  height: 100%;
+  width: 100%;
+}
+
+#all-performer-controls > button {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+}
+
+#info img {
+  max-width: 100%;
+}
+
+#info a.btn {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+#which-song label {
+  margin: 4px;
+}
+
+#info {
+  text-align: left;
+  padding: 10px;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+#piano-controls {
+  display: inline-block;
+  height: auto;
+  text-align: left;
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-left: 0.5vmin black solid;
+  border-right: 0.5vmin black solid;
+}
+#piano-controls button {
+  vertical-align: top;
+  width: 13vmin;
+  position: relative;
+  margin: 0;
+  font-size: initial;
+  overflow: hidden;
+}
+#piano-controls button span {
+  pointer-events: none;
+  font-size: 6vmin;
+}
+#piano-controls > .key-pressed {
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
+#piano-controls button:nth-child(6), #piano-controls button:nth-child(14) {
+  display: none;
+}
+#piano-controls button:nth-child(odd) {
+  background-color: white;
+  color: black;
+  height: calc(13vmin * 5);
+  border: 0.5vmin black solid;
+  border-right: none;
+  z-index: 0;
+}
+#piano-controls button:nth-child(odd) span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#piano-controls button:first-child {
+  border-left: none;
+}
+#piano-controls button:nth-child(even) {
+  background-color: black;
+  color: black;
+  border: none;
+  height: calc(calc(13vmin * 5) * 0.6);
+  width: calc(13vmin * 0.8);
+  margin-left: calc(13vmin * 0.8 / -2);
+  margin-right: calc(13vmin * 0.8 / -2);
+  z-index: 1;
+}
+#piano-controls button:focus {
+  outline: 0;
+}
+
+.svg-pointer-event-helper {
+  pointer-events: all;
+  pointer-events: bounding-box;
+  cursor: pointer;
+}
+
+#sheetmusic-container {
+  /* background-color: rgb(141, 150, 74); */
+  max-height: 30%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin-bottom: 15px;
+}
+
+.selected-note .vf-notehead path, .selected-note .vf-stem path, .selected-note .vf-modifiers path, .selected-note .vf-flag path {
+  fill: red;
+  stroke: red;
+}
+
+button i + span {
+  padding-left: 1ch;
+}
+
+#composer-controls {
+  display: inline-flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#composer-controls button {
+  margin: 4px;
+  min-height: 0;
+  height: auto;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+
+#all-composer-controls {
+  text-align: left;
+  margin: 4px;
+}
+
+#all-performer-controls {
+  text-align: left;
+  padding: 4px;
+}
+
+#type-controls {
+  width: 100%;
+  padding: 0 4px;
+}
+#type-controls .btn-toolbar .btn {
+  flex-grow: 1;
+  margin: 4px;
+}
+#type-controls .btn-toolbar {
+  flex-grow: 1;
+}
+
+/*# sourceMappingURL=music2.css.map */
