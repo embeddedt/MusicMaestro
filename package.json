@@ -12,6 +12,7 @@
     "contributors": [],
     "dependencies": {
         "opensheetmusicdisplay": "github:opensheetmusicdisplay/opensheetmusicdisplay",
+        "lodash": ">=4.17.13",
         "vexflow": "^1.2.89"
     },
     "scripts": {
